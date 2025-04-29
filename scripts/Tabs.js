@@ -21,12 +21,30 @@ class Tabs {
         this.rootElement = rootElement
         this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button);
         this.contentElements = this.rootElement.querySelectorAll(this.selectors.content);
-        this.state = this.getProxyState();
-        }
+        this.state = this.getProxyState(
+            {
+                activeTabIndex: [...this.buttonElements].findIndex((buttonElement) => 
+                buttonElement.classList.contains[this.stateClasses.isActive])
+            }
+        )
 
         this.limitTabIndex = this.buttonElements.length - 1;
         this.bindEvents();
     } 
+
+    getProxyState(initialState) {
+        return new Proxy(initialState, {
+            get: (target, prop) => {
+                return target[prop]
+            },
+            set: (target, prop, value) => {
+                target[prop] = value
+
+                this.updateUI();
+                return true
+            }
+        })
+    }
 
     activateTab(newTabIndex){
         this.state.activeTabIndex = newTabIndex
