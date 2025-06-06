@@ -12,6 +12,10 @@
         @include laptop {
             border-radius: rem(10);
         }
+
+        &--small {
+            height: fluid(290, 208);
+        }
     }
 
     &__panel {
@@ -36,6 +40,11 @@
                 180deg, rgba(20, 20, 20, 0) 44.28%,
                 #141414 100%
             )
+        }
+
+        &--center {
+            justify-content: center;
+            align-items: center;
         }
 
         * {
