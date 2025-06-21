@@ -1229,7 +1229,6 @@ button[aria-label]::before {
 }
 .card__grid--3-cols-alt {
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1.25rem, 0.7720588235rem + 1.9607843137vw, 3.125rem) 1.25rem;
 }
 @media (width <= 90.06125rem) {
   .card__grid--3-cols-alt {
@@ -1255,7 +1254,7 @@ button[aria-label]::before {
   grid-template-columns: 1fr auto;
   grid-template-areas: "other link" "other link";
   align-items: center;
-  column-gap: 1.25rem;
+  gap: clamp(0.625rem, 0.5612745098rem + 0.2614379085vw, 0.875rem) 1.25rem;
 }
 @media (width <= 30.06125rem) {
   .card__cell:not(.tile) {
@@ -1263,6 +1262,11 @@ button[aria-label]::before {
   }
   .card__cell:not(.tile) .card__cell-link {
     grid-area: initial;
+  }
+}
+@media (width <= 30.06125rem) {
+  .card__cell.tile {
+    padding: 1.25rem;
   }
 }
 .card__cell--wide {
@@ -1290,6 +1294,11 @@ button[aria-label]::before {
 }
 .card__cell-link {
   grid-area: link;
+}
+@media (width <= 30.06125rem) {
+  .card__cell-description {
+    font-size: 0.875rem;
+  }
 }
 
 .tabs__header {
