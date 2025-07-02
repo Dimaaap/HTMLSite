@@ -8,6 +8,10 @@
     />
     <title>Future-tech | Contacts</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js"
+      defer
+    ></script>
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
   <body>
@@ -314,6 +318,7 @@
                           class="field__control"
                           id="phoneNumber"
                           placeholder="(999) 999-99"
+                          data-js-input-mask="(000) 000-00-00"
                         />
                       </div>
                     </div>
@@ -395,7 +400,7 @@
                 <div class="card__body">
                   <div class="accordion-group">
                     <div class="accordion tile">
-                      <details class="accordion__details" name="faq">
+                      <details class="accordion__details" name="faq" open>
                         <summary class="accordion__summary">
                           <h4 class="accordion__title h6">
                             <span role="term" aria-details="faq-1">
