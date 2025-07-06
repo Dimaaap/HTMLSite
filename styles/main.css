@@ -2429,6 +2429,13 @@ button[aria-label]::before {
     overflow: hidden !important;
   }
 }
+.select__button, .select__option {
+  user-select: none;
+  cursor: pointer;
+}
+.select__button *, .select__option * {
+  pointer-events: none;
+}
 .select__button {
   display: flex;
   justify-content: space-between;
@@ -2511,6 +2518,9 @@ button[aria-label]::before {
 }
 .select__option.is-selected::after {
   content: "✓";
+}
+.select__option.is-current {
+  border-color: var(--color-accent);
 }
 
 .checkbox {
