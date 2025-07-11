@@ -2,6 +2,8 @@
 
 .select {
   &__original-control {
+    min-width: rem(100);
+
     @include mobile-above {
       @include visually-hidden;
     }
@@ -97,7 +99,7 @@
     align-items: center;
     column-gap: rem(10);
     border: var(--border);
-    border-radius: initial;
+    border-radius: inherit;
 
     @include hover {
       color: var(--color-accent);

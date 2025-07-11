@@ -2398,6 +2398,9 @@ button[aria-label]::before {
   }
 }
 
+.select__original-control {
+  min-width: 6.25rem;
+}
 @media (width > 47.99875rem) {
   .select__original-control {
     position: absolute !important;
@@ -2499,7 +2502,7 @@ button[aria-label]::before {
   align-items: center;
   column-gap: 0.625rem;
   border: var(--border);
-  border-radius: initial;
+  border-radius: inherit;
 }
 @media (any-hover: hover) {
   .select__option:hover {
@@ -2673,12 +2676,6 @@ button[aria-label]::before {
 
 .contacts__header {
   border-bottom: var(--border);
-}
-
-.header,
-main > *:not(:last-child),
-.footer {
-  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
